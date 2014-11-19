@@ -1,3 +1,5 @@
+{<img src="https://travis-ci.org/vulcancreative/headingify.svg" alt="Build Status" />}[https://travis-ci.org/vulcancreative/headingify]
+
 = Headingify
 
 A method used to convert a string into a heading. It extends the String class; currently only supporting the English language. Please contribute if you are adept in other languages utilizing articles, conjuctions, and prepositions.
