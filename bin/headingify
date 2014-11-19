@@ -2,23 +2,22 @@
 
 require 'headingify'
 
-base = ""
-
+# print help by default
 if ARGV.length == 0
-  p "Here's how to use it, dumbass"
+  print Headingify.help
 end
 
 ARGV.each_with_index do |s, i|
   if s =~ /-*h$/ || s =~ /-*help$/
-    p "Here's how to use it, dumbass"
-    p "Here's some help"
+    print Headingify.help
   elsif s =~ /-*v$/ || s =~ /-*version$/
-    p "Here's some version info"
+    t = "#{Headingify::TITLE}"
+    v = "#{Headingify::VERSION}"
+    u = "(#{Headingify::UPDATE} revision #{Headingify::REVISION})"
+    print "#{t}, #{v} #{u}\n"
   elsif i == 0
-    base = s
-    p "received base : \"#{base}\""
-    p "output : \"#{base.headingify}\""
+    print s.headingify + "\n"
   else
-    p "Here's how to use it, dumbass"
+    print Headingify.help
   end
 end
