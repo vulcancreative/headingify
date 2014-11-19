@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class String
   def headingify
     #
@@ -45,7 +47,7 @@ class String
     end
 
     # capitalize only what's necessary
-    working.each_with_index do |(s), i|
+    working.each_with_index do |s, i|
       working[i] = /\\%(.*)\\%/.match(s)[1] if s.include?("\%")
       next if s =~ /^o'.*$/
       if blacklist.include?(s) && i == 0; s.capitalize!; next; end
