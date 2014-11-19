@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.authors       = ["Chris Calo"]
   s.email         = ["ccalo@vulcanca.com"]
   s.summary       = "A method used to convert a Ruby String into a grammatically correct heading."
-  s.description   = "#{s.summary} It extends String class; English only.\n\n#{Headingify::help}"
+  s.description   = "#{s.summary} It extends String class; currently English only. Please contribute on Github if you have an adept knowledge of articles, conjunctions, and prepositions a non-English languages."
   s.homepage      = "https://github.com/vulcancreative/headingify"
   s.license       = "MIT"
 
