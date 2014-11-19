@@ -1,8 +1,8 @@
 module Headingify
   TITLE          = "Ruby String.headingify Core Extension"
-  VERSION        = "1.0.1"
+  VERSION        = "1.0.2"
   UPDATE         = "2014-11-19"
-  REVISION       = "4"
+  REVISION       = "23"
   USAGE          = "headingify \"string\" | \"an \\%ESCAPED\\% string\""
   EXAMPLE_INPUT  = "\"garlic is as \\%GOOD\\% as ten mothers\""
   EXAMPLE_OUTPUT = "Garlic Is as GOOD as Ten Mothers"
