@@ -2,7 +2,7 @@
 
 A method used to convert a string into a heading. It extends the String class; currently only supporting the English language. Please contribute if you are adept in other languages utilizing articles, conjuctions, and prepositions.
 
-Headingify is based off of grammatical rules set forth in _The Chicago Manual of Style. ed. 16 pgf. 8.155_.
+Headingify is based off of grammatical rules set forth in *The Chicago Manual of Style. ed. 16 pgf. 8.155*.
 
 == Download and Installation
 
