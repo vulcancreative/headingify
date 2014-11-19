@@ -8,9 +8,9 @@ if ARGV.length == 0
 end
 
 ARGV.each_with_index do |s, i|
-  if s =~ /-*h$/ || s =~ /-*help$/
+  if s =~ /^-{1,}h$/ || s =~ /^-{1,}help$/
     print Headingify.help
-  elsif s =~ /-*v$/ || s =~ /-*version$/
+  elsif s =~ /^-{1,}v$/ || s =~ /^-{1,}version$/
     t = "#{Headingify::TITLE}"
     v = "#{Headingify::VERSION}"
     u = "(#{Headingify::UPDATE} revision #{Headingify::REVISION})"
