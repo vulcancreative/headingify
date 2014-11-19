@@ -1,30 +1,45 @@
-# Headingify
+= Headingify
 
-TODO: Write a gem description
+A method used to convert a string into a heading. It extends the String class; currently only supporting the English language. Please contribute if you are adept in other languages utilizing articles, conjuctions, and prepositions.
 
-## Installation
+Headingify is based off of grammatical rules set forth in _The Chicago Manual of Style. ed. 16 pgf. 8.155_.
+
+== Download and Installation
+
+The latest version of Headingify can be installed with RubyGems:
+  
+  % [sudo] gem install headingify
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'headingify'
-```
+  gem 'headingify'
+    
+== Usage
 
-And then execute:
+To execute in standalone mode do the following:
+  
+  % headingify "a simple string, including the preposition 'with'."
+    > A Simple String, including the Preposition 'with'.
 
-    $ bundle
+To escape words in a string do the following:
+  
+  % headingify "folding of the \%CheY\% protein."
+    > Folding of the CheY Protein.
 
-Or install it yourself as:
+Headingify works on the String class, and can also be used in code:
+  
+  s = "a simple string, including the preposition 'with'.".headingify
+  title = "folding of the \%CheY\% protein."; title.headingify!
 
-    $ gem install headingify
+== License
 
-## Usage
+Headingify is released under the MIT license:
 
-TODO: Write usage instructions here
+  * http://www.opensource.org/licenses/MIT
 
-## Contributing
+== Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/headingify/fork )
+1. Fork it (https://github.com/[my-github-username]/headingify/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
