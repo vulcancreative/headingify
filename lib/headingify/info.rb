@@ -1,6 +1,6 @@
 module Headingify
   TITLE          = "Ruby String.headingify Core Extension"
-  VERSION        = "1.0.0"
+  VERSION        = "1.0.1"
   UPDATE         = "2014-11-19"
   REVISION       = "4"
   USAGE          = "headingify \"string\" | \"an \\%ESCAPED\\% string\""
