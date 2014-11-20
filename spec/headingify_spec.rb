@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Headingify do
-  it "should return the input String as a proper title" do
+  it "should return the input String as a proper title (in code)" do
     input = ["i'm dale, but you have to call me dragon.", 
     "i swear, i'm so pissed off at my mom.", 
     "as soon as she's of age, i'm putting her in a home.", 
