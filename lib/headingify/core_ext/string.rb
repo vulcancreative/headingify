@@ -42,8 +42,7 @@ class String
     include_open_quote = lambda do |w|
       q = %w[' " ’ ‘ “ ”]
 
-      return true if q.include?(w[0]) || q.include?(w[w.length - 1])
-      return false
+      return !/^(["'‘“’”]).*/.match(w).nil?
     end
 
     # capitalize only what's necessary
