@@ -38,3 +38,8 @@ Headingify works on the String class, and can also be used in code:
 Headingify is released under the MIT license:
 
   * http://www.opensource.org/licenses/MIT
+  
+== Contributing
+
+Currently looking for help with i18n!
+If you have an adept knowledge of articles, conjunctions, prepositions, and grammatical syntax in non-English languages, you are encouraged to contribute.
