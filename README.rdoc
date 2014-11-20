@@ -38,11 +38,3 @@ Headingify works on the String class, and can also be used in code:
 Headingify is released under the MIT license:
 
   * http://www.opensource.org/licenses/MIT
-
-== Contributing
-
-1. Fork it (https://github.com/vulcancreative/headingify/fork)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
