@@ -41,4 +41,4 @@ Headingify is released under the MIT license:
   
 == Contributing
 
-Currently looking for help with i18n! If you have an adept knowledge of articles, conjunctions, prepositions, and grammatical syntax in non-English languages, you are encouraged to contribute.
+Currently looking for help with i18n. If you have an adept knowledge of articles, conjunctions, prepositions, and grammatical syntax in non-English languages, you are encouraged to contribute.
