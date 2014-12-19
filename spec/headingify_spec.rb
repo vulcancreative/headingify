@@ -10,7 +10,9 @@ describe Headingify do
     "dad, what are you doing? it's 'shark week'!", 
     "i want to roll you into a little ball and shove you up my vagina.", 
     "i traveled 500 miles to give you my seed!", 
-    "a simple string, including the preposition 'with'."]
+    "a simple string, including the preposition 'with'.",
+    "this is a \%QuIcK\% test",
+    "\%PI\%"]
 
     output = ["I'm Dale, but You Have to Call Me Dragon.", 
     "I Swear, I'm so Pissed off at My Mom.", 
@@ -20,7 +22,9 @@ describe Headingify do
     "Dad, What Are You Doing? It's 'Shark Week'!", 
     "I Want to Roll You into a Little Ball and Shove You up My Vagina.", 
     "I Traveled 500 Miles to Give You My Seed!", 
-    "A Simple String, including the Preposition 'with'."]
+    "A Simple String, including the Preposition 'with'.",
+    "This Is a QuIcK Test",
+    "PI"]
 
     input.each_with_index do |s, i|
       expect(s.headingify).to eq(output[i])

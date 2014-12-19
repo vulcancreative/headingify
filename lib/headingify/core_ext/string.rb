@@ -47,7 +47,7 @@ class String
 
     # capitalize only what's necessary
     working.each_with_index do |s, i|
-      working[i] = /\\%(.*)\\%/.match(s)[1] if s.include?("\%")
+      working[i] = s.gsub /\%/, "" if s.include? "\%"
       next if s =~ /^o'.*$/
       if blacklist.include?(s) && i == 0; s.capitalize!; next; end
       blacklist.include?(s) ? s.downcase! : s.capitalize!
