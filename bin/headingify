@@ -3,9 +3,7 @@
 require 'headingify'
 
 # print help by default
-if ARGV.length == 0
-  print Headingify.help
-end
+print Headingify.help if ARGV.length == 0
 
 ARGV.each_with_index do |s, i|
   if s =~ /^-{1,}h$/ || s =~ /^-{1,}help$/

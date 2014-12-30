@@ -50,7 +50,17 @@ class String
 
     # capitalize only what's necessary
     working.each_with_index do |s, i|
-      working[i] = s.gsub /\%/, "" if s.include? "\%"
+      if s.include? "\%"
+        working[i] = s.delete "\\%"
+
+        # buckass patch for executable access
+        if working[i][0] == "\\" || working[i][working.length - 1] == "\\"
+          working[i].delete! "\\" 
+        end
+
+        next
+      end
+
       next if s =~ /^o'.*$/
       if blacklist.include?(s) && i == 0; s.capitalize!; next; end
       blacklist.include?(s) ? s.downcase! : s.capitalize!
