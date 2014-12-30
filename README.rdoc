@@ -14,7 +14,7 @@ The latest version of Headingify can be installed with RubyGems:
 
 Add this line to your application's Gemfile:
 
-  gem 'headingify'
+  gem 'headingify', '~> 1.2.0'
     
 == Usage
 
@@ -32,6 +32,32 @@ Headingify works on the String class, and can also be used in code:
   
   s = "a simple string, including the preposition 'with'.".headingify
   title = "folding of the \%CheY\% protein."; title.headingify!
+
+To check if a String has already been headingified:
+  
+  % s.headingify; s.headingified?
+    > true
+
+This is beneficial when a String may be headingified twice, where the initial String contained escaped content:
+
+  s = "using the \%PI\% constant to access the Float variable".headingify
+    > "Using the PI Constant to Access the Float Variable"
+
+  # without safety (note the word "Pi" changes in case)
+  s.headingify
+    > "Using the Pi Constant to Access the Float Variable"
+
+  # with safety (nothing is changed, if previously headingified)
+  s.headingify! unless s.headingified?
+    > nil
+
+  # ...or more easily
+  s.headingify_safe # or #headingify_safe! for replacement
+    > nil
+
+  # ...and we still have our initial String, ta-da!
+  puts s
+    > "Using the PI Constant to Access the Float Variable"
 
 == License
 

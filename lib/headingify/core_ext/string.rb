@@ -1,6 +1,9 @@
 # encoding: utf-8
 
 class String
+  attr_accessor :headingified
+  alias_method :headingified?, :headingified
+
   def headingify
     #
     # built to syntactically supercede String.[titlecase|titleize]
@@ -68,10 +71,27 @@ class String
       end
     end
 
-    working.join(" ")
+    result = working.join(" ")
+    result.headingified = true
+
+    return result
   end
   
   def headingify!
     replace self.headingify
+    self.headingified = true
+    return self
+  end
+
+  def headingify_safe
+    return self.headingify unless self.headingified?; nil
+  end
+
+  def headingify_safe!
+    unless self.headingified?
+      replace self.headingify
+      self.headingified = true
+      return self
+    end
   end
 end

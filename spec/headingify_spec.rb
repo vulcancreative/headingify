@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Headingify do
-  it "should return the input String as a proper title (in code)" do
+  it "should return the input String as a proper title" do
     input = ["i'm dale, but you have to call me dragon.", 
     "i swear, i'm so pissed off at my mom.", 
     "as soon as she's of age, i'm putting her in a home.", 
@@ -26,8 +26,18 @@ describe Headingify do
     "This Is a QuIcK Test",
     "PI"]
 
+    # test regular headingify and positive safety correlation
     input.each_with_index do |s, i|
       expect(s.headingify).to eq(output[i])
+      expect(s.headingify.headingified?).to be true
+      expect(s.headingify.headingify_safe).to be nil
+    end
+
+    # test safe headingify
+    input.each_with_index do |s, i|
+      expect(s.headingify_safe).to eq(output[i])
+      expect(s.headingify_safe.headingified?).to be true
+      expect(s.headingify_safe.headingify_safe).to be nil
     end
   end
 end
